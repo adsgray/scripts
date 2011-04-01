@@ -1,0 +1,23 @@
+#!/usr/bin/perl
+
+use strict;
+use File::Basename;
+
+my $VIDEODIR="/video";
+my $regex = $ARGV[0];
+
+opendir(DIR, $VIDEODIR);
+
+while (my $fname = readdir(DIR)) {
+	my $basename = basename $fname;
+
+	next if ($basename !~ /mpg$/);
+
+	my $mythname = `mythname.pl $basename`;
+	chomp($mythname);
+
+	if ($mythname =~ qr{$regex}i) {
+		print "[$basename] [$mythname]\n";
+		symlink "$VIDEODIR/$basename", "$basename";
+	}
+}
