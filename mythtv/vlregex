@@ -3,7 +3,7 @@
 use strict;
 use File::Basename;
 
-my $VIDEODIR="/video";
+my $VIDEODIR="/video/recordings";
 my $regex = $ARGV[0];
 
 opendir(DIR, $VIDEODIR);
