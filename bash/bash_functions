@@ -1,0 +1,21 @@
+
+# stash local changes; git pull --rebase; pop stash
+function gitp {
+    # I wish git stash returned a different $? exit status when it didn't stash anything.
+    # Would make the flaky string comparison unnecessary.
+    
+    nolocal="No local changes to save"
+    stashoutput=`git stash save gitpcmd`
+
+    if [ "$stashoutput" == "$nolocal" ]; then
+        dostashpop=false
+    else
+        dostashpop=true
+    fi
+
+    /usr/bin/git pull --rebase
+
+    if $dostashpop ; then
+        git stash pop
+    fi
+}
