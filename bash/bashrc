@@ -1,0 +1,28 @@
+alias ls='ls -FG'
+alias phpgrep='find . -name \*php|xargs grep -ni '
+alias jsgrep='find . -name \*js|xargs grep -ni '
+alias htmlgrep='find . -name \*html|xargs grep -ni '
+alias cssgrep='find . -name \*css|xargs grep -ni '
+alias lessgrep='find . -name \*less|xargs grep -ni'
+alias scalagrep='find . -name \*scala|xargs grep -ni '
+
+# diff ignore whitespace
+alias svnshow='svn diff --diff-cmd diff -x -uw -c '
+
+export PS1="\e[0;34m\u\e[0;33m@\e[0;34m\h\e[m \e[0;36m\w\e[m [\j][\#] \e[0;33m$\e[m "
+
+export HISTCONTROL=erasedups
+export HISTSIZE=10000
+export HISTTIMEFORMAT="%D %T "
+export HISTIGNORE="&:ls:exit:history"
+shopt -s histappend
+
+export EDITOR=vim
+
+export SBT_OPTS="$SBT_OPTS -Xms512M -Xmx1536M -Xss512M -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=384M"
+export SBT_OPTS="$SBT_OPTS -Dfile.encoding=UTF-8"
+export SBT_OPTS="$SBT_OPTS -Djava.library.path=/usr/local/lib" # for jzmq
+export JAVA_TOOL_OPTIONS='-Dfile.encoding=UTF8'
+
+
+alias sqlfind='find resources/sql -type f -name \*\.js  -mtime -5d -ls -or -name \*\.sql -mtime -5d -ls |grep -vi \.svn'
