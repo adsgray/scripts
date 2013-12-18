@@ -4,4 +4,4 @@ user=andrew
 db=databasename
 dumpfile=table.sql.gz
 
-zcat dumpfile | mysql -u $user -p $databasename
+zcat dumpfile | mysql -u $user -p $db
