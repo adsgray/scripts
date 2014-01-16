@@ -1,0 +1,6 @@
+# rvm is not a function
+# Login shell BS.
+# This fixes it.
+# http://stackoverflow.com/questions/9336596/rvm-installation-not-working-rvm-is-not-a-function
+# 
+~/.rvm/scripts/rvm
