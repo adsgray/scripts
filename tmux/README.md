@@ -1,6 +1,7 @@
 ### URLs
 * http://www.dayid.org/os/notes/tm.html
 * http://cloud101.eu/blog/2012/04/10/tmux-simple-guide-to-the-terminal-multiplexer/
+* http://stackoverflow.com/questions/18760281/how-to-increase-scrollback-buffer-size-in-tmux
 
 ### With my (GNU Screen-ish) tmux.conf
 * ctrl-a " _horizontal spli_
