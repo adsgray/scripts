@@ -1,0 +1,5 @@
+#!/bin/bash
+
+# set notifications to be only 2 seconds long
+
+defaults write com.apple.notificationcenterui bannerTime 2
