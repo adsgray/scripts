@@ -1,0 +1,21 @@
+[branch]
+	autosetuprebase = always
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+    interactive = auto
+
+[status]
+    showUntrackedFiles = no
+
+[pager]
+    status = true
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+	lgn = log --name-only --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%C(bold blue)<%an>%Creset' --abbrev-commit
+    shn = show --name-only
+    shead = diff-tree --no-commit-id --name-only -r HEAD
+[push]
+	default = current
