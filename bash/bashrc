@@ -1,10 +1,10 @@
 alias ls='ls -FG'
-alias phpgrep='find . -name \*php|xargs grep -ni '
-alias jsgrep='find . -name \*js|xargs grep -ni '
-alias htmlgrep='find . -name \*html|xargs grep -ni '
-alias cssgrep='find . -name \*css|xargs grep -ni '
-alias lessgrep='find . -name \*less|xargs grep -ni'
-alias scalagrep='find . -name \*scala|xargs grep -ni '
+alias phpgrep='find . -type f -name \*php|xargs grep -ni '
+alias jsgrep='find . -type f -name \*js|xargs grep -ni '
+alias htmlgrep='find . -type f -name \*html|xargs grep -ni '
+alias cssgrep='find . -type f -name \*css|xargs grep -ni '
+alias lessgrep='find . -type f -name \*less|xargs grep -ni'
+alias scalagrep='find . -type f -name \*scala|xargs grep -ni '
 
 # diff ignore whitespace
 alias svnshow='svn diff --diff-cmd diff -x -uw -c '
