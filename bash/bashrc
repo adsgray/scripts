@@ -25,6 +25,6 @@ export SBT_OPTS="$SBT_OPTS -Djava.library.path=/usr/local/lib" # for jzmq
 export JAVA_TOOL_OPTIONS='-Dfile.encoding=UTF8'
 
 
-alias sqlfind='find resources/sql -type f -name \*\.js  -mtime -5d -ls -or -name \*\.sql -mtime -5d -ls |grep -vi \.svn'
+alias sqlfind='find resources/sql -type f -iname \*\.js  -mtime -5d -ls -or -iname \*\.sql -mtime -5d -ls |grep -vi \.svn'
 
 export ANDROID_HOME=~/android-sdks/
