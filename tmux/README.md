@@ -5,6 +5,9 @@
 * http://unix.stackexchange.com/questions/14300/moving-tmux-window-to-pane
 * http://superuser.com/questions/231130/unable-to-use-pbcopy-while-in-tmux-session
 
+### Copy and paste in El Capitan
+* http://apple.stackexchange.com/questions/208387/copy-to-clipboard-from-tmux-in-el-capitan
+
 ## Other
 * brew install reattach-to-user-namespace --wrap-pbcopy-and-pbpaste
 
