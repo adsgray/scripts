@@ -28,3 +28,20 @@ export JAVA_TOOL_OPTIONS='-Dfile.encoding=UTF8'
 alias sqlfind='find resources/sql -type f -iname \*\.js  -mtime -5d -ls -or -iname \*\.sql -mtime -5d -ls |grep -vi \.svn'
 
 export ANDROID_HOME=~/android-sdks/
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+source ~/.profile
+source ~/.git-completion.bash
+
+export HOMEBREW_PREFIX="/usr/local"
+export HOMEBREW_REPOSITORY="/usr/local"
+export HOMEBREW_LIBRARY="/usr/local"
+export HOMEBREW_CELLAR="/usr/local/Cellar"
+
+export NVM_DIR=~/.nvm
+. $(brew --prefix nvm)/nvm.sh
+
+# for scrapy
+# http://stackoverflow.com/questions/30964836/scrapy-throws-importerror-cannot-import-name-xmlrpc-client
+export PYTHONPATH=/Library/Python/2.7/site-packages:$PYTHONPATH
