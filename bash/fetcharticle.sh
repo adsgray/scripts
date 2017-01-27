@@ -17,7 +17,11 @@ title=`cat $tmpfile | perl -l -0777 -ne 'print $1 if /<title.*?>\s*(.*?)\s*<\/ti
 title=$(echo $title|tr -d '|&')
 title=$(echo $title|tr ' ' '_')
 
+articlefile="$articledir/$title.txt"
+echo "$url" > $articlefile
 # extract text and save
-lynx -dump -nomargins -width=$width -stdin < $tmpfile > $articledir/$title.txt
+lynx -dump -nomargins -width=$width -stdin < $tmpfile >> $articlefile
+
+echo $articlefile
 
 rm $tmpfile
