@@ -6,7 +6,7 @@
 url=$1
 tmpfile=`mktemp`
 articledir=~/notes/article
-width=75
+width=70
 useragent="Mozilla/5.0 Lynx (iPhone; CPU iPhone OS 6_0_1 like Mac OS X; nl-nl) AppleWebKit/536.26 (KHTML, like Gecko) CriOS/23.0.1271.96 Mobile/10A523 Safari/8536.25 (1C019986-AF73-46A7-8F31-0E86ADFFCDB4)"
 
 # fetch raw HTML
