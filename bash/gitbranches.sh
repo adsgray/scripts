@@ -1,3 +1,3 @@
 #!/bin/bash
 
-git branch > ~/tmp/gitbranches
+git branch |tr -d "\* " > ~/tmp/gitbranches
