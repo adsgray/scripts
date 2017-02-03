@@ -1,7 +1,12 @@
 #!/bin/bash
 
 zipdir=~/notes/article/zip
-today=`date "+%Y-%m-%d"`
+if [ -z $2 ]; then
+    today=`date "+%Y-%m-%d"`
+else
+    today=$2
+fi
+
 todayfile="$zipdir/articles-$today.zip"
 
 if [ -z $1 ]; then
