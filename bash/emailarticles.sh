@@ -23,7 +23,7 @@ if [ -f $articlezipfile ]; then
     subject="articles $today"
     echo "Articles for ${today}:" > $msgfile
     articlecount.sh list $today >> $msgfile
-    sendemail -f $gmailaddress -t $gmailaddress -a $articlezipfile -s smtp.gmail.com -o tls=yes -xu $gmailusername -xp $gapppassword -u $subject -o message-file=$msgfile
+    sendemail -f $gmailaddress -t $gmailaddress -a $articlezipfile -s smtp.gmail.com:587 -o tls=yes -xu $gmailusername -xp $gapppassword -u $subject -o message-file=$msgfile
     rm $msgfile
 else
     echo "$articlezipfile not found in $zipdir"
