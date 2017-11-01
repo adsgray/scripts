@@ -3,7 +3,7 @@
 # fetch a URL and save its text
 # Note: required lynx
 
-url=$1
+url=`echo $1|cut -d '?' -f 1`
 tmpfile=`mktemp`
 articledir=~/notes/article
 width=70
@@ -23,5 +23,7 @@ echo "$url" > $articlefile
 lynx -dump -nomargins -width=$width -stdin < $tmpfile >> $articlefile
 
 echo $articlefile
+# for convenience, put filename in clipboard
+echo $articlefile > pbcopy
 
 rm $tmpfile
