@@ -24,6 +24,6 @@ lynx -dump -nomargins -width=$width -stdin < $tmpfile >> $articlefile
 
 echo $articlefile
 # for convenience, put filename in clipboard
-echo $articlefile > pbcopy
+echo $articlefile | pbcopy
 
 rm $tmpfile
