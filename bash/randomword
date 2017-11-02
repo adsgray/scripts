@@ -1,3 +1,6 @@
 #!/bin/bash
 
-cat /usr/share/dict/words | perl -MList::Util=shuffle -e "srand $1; print shuffle(<STDIN>);"|head -1
+# make a parameter
+salt=42
+
+cat /usr/share/dict/words | perl -MList::Util=shuffle -e "srand $salt*$1; print shuffle(<STDIN>);"|head -1
