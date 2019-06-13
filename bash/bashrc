@@ -45,3 +45,6 @@ export NVM_DIR=~/.nvm
 # for scrapy
 # http://stackoverflow.com/questions/30964836/scrapy-throws-importerror-cannot-import-name-xmlrpc-client
 export PYTHONPATH=/Library/Python/2.7/site-packages:$PYTHONPATH
+
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagaced
