@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# make a parameter
-salt=42
+salt=$1
 
 cat /usr/share/dict/words | perl -MList::Util=shuffle -e "srand $salt*$1; print shuffle(<STDIN>);"|head -1
