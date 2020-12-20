@@ -10,4 +10,10 @@ Can right click on its icon in the bar and choose "low density"
 
 And to run Stardew Valley (say) you have to run steam with "export TERM=xterm" I'M NOT KIDDING.
 
+# remapping controls of steam games
 https://gaming.stackexchange.com/questions/42498/is-it-possible-to-edit-the-keybindings-in-super-meat-boy
+
+# installing zdoom
+sudo apt-get install software-properties-common
+wget -O- https://debian.drdteam.org/drdteam.gpg | sudo apt-key add -
+sudo apt-add-repository 'deb https://debian.drdteam.org/ stable multiverse'
