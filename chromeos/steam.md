@@ -1,7 +1,8 @@
 # To install steam on crostini
 1. add `deb http://httpredir.debian.org/debian/ jessie main contrib non-free` to eg. /etc/apt/sources.list.d/nonfree.list
-2. sudo apt update
-3. sudo apt install steam
+2. sudo dpkg --add-architecture i386
+3. sudo apt update
+4. sudo apt install steam
 
 Then run it with:
 GDK\_SCALE=2 steam (doesn't actually work though, app still unreadably small)
